@@ -1,0 +1,383 @@
+
+
+*{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+
+}
+body button:hover
+{
+    background-color: rgb(69, 223, 69);
+}
+ 
+body{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    /* background-colo; */
+}
+
+/* header */
+
+.header{
+    height: 100px;
+    max-width:100% ;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+.header li{
+    font-size: 1.1vmax;
+    font-weight: bolder;
+}
+.header img{
+    height: 60px;
+    width: 150px;
+}
+.header i{
+  font-size: 2vmax;
+  display: none;
+}
+
+/* section1 */
+
+.section1{
+    height: 700px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section1 div{
+    height: 600px;
+    width: 45vmax;
+}
+
+.section1 .text
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:flex-start;
+    padding: 0 50px 0 50px;
+    background-color: white;
+    animation-name: textboxsection1;
+    animation-duration: 0.4s;
+    animation-direction: reverse;
+    animation-fill-mode: forwards;
+}
+@keyframes textboxsection1 {
+    0% { right: 0px;}
+    100% {right: 500px;}
+    
+}
+.section1 .text h2{
+    font-size: 3vmax;
+    color: gray;
+}
+.section1 .text p{
+    font-size: 1.3vmax;
+    text-align: justify;
+}
+.section1 .text button{
+    height: 50px;
+    width: 150px;
+    background-color: green;
+    color: white;
+    font-size: 15px;
+    border: 5px solid white;
+    outline: 2px solid green;
+    
+}
+.section1 .clients{
+    display: flex;
+    justify-content: space-around;
+    align-items:center ;
+    height: 6vmax;
+    width: 38vmax;
+    font-size:1vmax;
+}
+.clients .nmbr
+{
+    font-size: 30px;
+    font-weight: bolder;
+}
+.section1 .image{
+    background-image: url(./pic1.jpg);
+    background-size:cover;
+}
+.section1responsive{
+    display: none;
+}
+
+@media (max-width:870px) {
+    .section1{
+        display: none;
+    }
+    .section1responsive{
+        display: flex;
+        flex-direction: column;
+        justify-content:space-around;
+        align-items: center;
+        height: 500px;
+        width:100%;
+        padding: 0 30px;
+        text-align: center;
+    }
+    .section1responsive h2
+    {
+        font-size: 4vmax;
+        color: gray;
+    }    
+    .section1responsive p
+    {
+        font-size: 2vmax;
+        line-height: 3vmax;
+        letter-spacing: 0.2vmax;
+    }   
+    .section1responsive button
+    {
+        height: 6vmax;
+        width: 16vmax;
+        background-color: green;
+        border: none;
+        color: white;
+        border: 4px solid white;
+        outline: 2px solid green;
+
+    }
+    .section1responsive .clients{
+        display: flex;
+        justify-content:space-around;
+        align-items: center;
+        height:10vmax;
+        width: 60vmax;
+    }
+    .clients li{
+        padding:1.32vmax 0;
+    }
+}
+/* 
+section2 */
+
+.section2
+{
+    background-color: #3498db;
+    height: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color:white;
+    padding: 30px 0;
+}
+.section2 .one
+{
+    height: 400px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section2 .one div{
+    height: 400px;
+    width:33.333% ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    font-size: 1.5vmax;
+}
+.section2 .one img{
+    border: 10px solid white;
+}
+
+.section2 .one button{
+    height: 30px;
+    width: 120px;
+    background-color: green;
+    color: white;
+    border: none;
+}
+.section2 h1{
+    font-size: 3vmax;
+    position: relative;
+    left: 35vmax;
+    animation-name: leftmovement;
+    animation-duration: 0.4s;
+    animation-timing-function:linear;
+    animation-fill-mode: forwards;
+    animation-direction: reverse;
+}
+@keyframes leftmovement {
+    0%   { left:0px; }
+  100%  {left:1000px;}
+
+}
+.section2 h2{
+    font-size: 2.5vmax;
+    position: relative;
+    right: 40vmax;
+    animation-name: rightmovement;
+    animation-duration: 0.6s;
+    animation-timing-function:linear;
+    animation-fill-mode: forwards;
+    animation-direction: reverse;
+}
+
+@keyframes rightmovement {
+    0%   { right:0px; }
+  100%  {right:1000px;}
+
+}
+
+
+
+
+
+.section2> button{
+    height: 50px;
+    width: 250px;
+    background-color: green;
+    color: white;
+    border: none;
+    font-size: 20px;
+    border: 5px solid #3498db;
+    outline: 2px solid green;
+}
+@media (max-width:850px) {
+    .section2
+{
+    height: 1000px;
+    width: 100%;
+    padding: 30px 0;
+}
+.section2 .one
+{
+    height: 300px;
+    width: 90%;
+}
+.section2 .one div{
+    height: 300px;
+    width:33.333% ;
+    font-size: 1.5vmax;
+}
+.section2 .one button{
+    height: 25px;
+    width: 100px;
+}
+.section2> button{
+    height: 40px;
+    width: 210px;
+    
+}
+}
+
+@media (max-width:700px) 
+{
+ .header li{
+        display: none;    
+ }
+
+.header{
+    justify-content: space-between;
+    padding: 0 20px 0 20px;
+}
+ .header  i{
+    display:block;
+    font-size: 5vmax;
+ }
+}
+
+
+.section3
+{
+    background-color: rgb(236, 232, 232);
+    height: 1000px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+.section3 h1{
+    font-size: 3vmax;
+}
+.section3 h4{
+    font-size: 1.5vmax;
+}
+.section3>p{
+    font-size: 1.1vmax;
+    padding: 0 20vmax;
+}
+.section3 .boxes{
+    height: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+ .boxes > .box{
+    height: 600px;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
+}
+
+.box img,h1,p{
+    padding: 1.1vmax 2vmax;
+}
+.box h1{
+    font-size: 1.9vmax;
+}
+.box p{
+    font-size: 1.1vmax;
+    line-height: 1.4vmax;
+    letter-spacing: 0.1vmax;
+    word-spacing: 0.5vmax;
+}
+
+.boxes .box > img{
+    width: 180px;
+    height: 150px;
+}
+.section3 .buttons{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.buttons button{
+    height: 4vmax;
+    width: 10vmax;
+    color: white;
+    background-color: green;
+    border: 3px solid white;
+    outline: 1px solid green;
+}
+
+.section4{
+    height: 500px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+ button:hover
+{
+    background-color: rgb(69, 223, 69);
+}
